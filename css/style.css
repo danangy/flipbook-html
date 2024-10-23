@@ -1,0 +1,79 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure the body doesn't scroll */
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none;    /* For Firefox */
+  -ms-user-select: none;     /* For IE10+ */
+  user-select: none;         /* Standard syntax */
+}
+
+/* Flipbook container */
+#flipbook-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Responsive Flipbook dimensions */
+#flipbook {
+  width: 80vw;  /* Use 80% of the viewport width */
+  height: 50vh; /* Use 50% of the viewport height */
+  position: relative;
+}
+
+/* Responsive page dimensions */
+.page {
+  width: 50%;    /* Half of the flipbook's width */
+  height: 100%;  /* Full height of the flipbook */
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keep the aspect ratio of the images */
+}
+
+/* Navigation buttons */
+.nav-button {
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid #838383;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 25px;
+}
+
+#prev-page {
+  left: 5vw;  /* Position on the left side with 5% of the viewport width */
+}
+
+#next-page {
+  right: 5vw; /* Position on the right side with 5% of the viewport width */
+}
+
+.nav-button:hover {
+  background-color: #838383;
+  color: white;
+}

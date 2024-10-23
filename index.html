@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipbook Example</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Turn.js -->
+  <script src="js/turn.js"></script>
+</head>
+<body>
+
+  <div id="flipbook-container">
+    <button id="prev-page" class="nav-button"><i class="fas fa-arrow-left"></i></button>
+    
+    <div id="flipbook">
+      <div class="page"><img src="images/1.png" alt="Page 1"></div>
+      <div class="page"><img src="images/2.png" alt="Page 2"></div>
+      <div class="page"><img src="images/3.png" alt="Page 3"></div>
+      <div class="page"><img src="images/4.png" alt="Page 4"></div>
+      <div class="page"><img src="images/5.png" alt="Page 5"></div>
+      <div class="page"><img src="images/6.png" alt="Page 6"></div>
+      <div class="page"><img src="images/7.png" alt="Page 7"></div>
+      <div class="page"><img src="images/8.png" alt="Page 8"></div>
+      <div class="page"><img src="images/9.png" alt="Page 9"></div>
+      <div class="page"><img src="images/10.png" alt="Page 10"></div>
+      <div class="page"><img src="images/11.png" alt="Page 11"></div>
+      <div class="page"><img src="images/12.png" alt="Page 12"></div>
+      <div class="page"><img src="images/13.png" alt="Page 13"></div>
+      <div class="page"><img src="images/14.png" alt="Page 14"></div>
+      <div class="page"><img src="images/15.png" alt="Page 15"></div>
+      <div class="page"><img src="images/16.png" alt="Page 16"></div>
+      <div class="page"><img src="images/17.png" alt="Page 17"></div>
+      <div class="page"><img src="images/18.png" alt="Page 18"></div>
+      <div class="page"><img src="images/19.png" alt="Page 19"></div>
+      <div class="page"><img src="images/20.png" alt="Page 20"></div>
+      <div class="page"><img src="images/21.png" alt="Page 21"></div>
+      <div class="page"><img src="images/22.png" alt="Page 22"></div>
+      <div class="page"><img src="images/23.png" alt="Page 23"></div>
+      <div class="page"><img src="images/24.png" alt="Page 24"></div>
+      <div class="page"><img src="images/25.png" alt="Page 25"></div>
+      <div class="page"><img src="images/26.png" alt="Page 26"></div>
+      <div class="page"><img src="images/27.png" alt="Page 27"></div>
+      <div class="page"><img src="images/28.png" alt="Page 28"></div>
+      <div class="page"><img src="images/29.png" alt="Page 29"></div>
+      <div class="page"><img src="images/30.png" alt="Page 30"></div>
+      <div class="page"><img src="images/31.png" alt="Page 31"></div>
+      <div class="page"><img src="images/32.png" alt="Page 32"></div>
+      <div class="page"><img src="images/33.png" alt="Page 33"></div>
+      <div class="page"><img src="images/34.png" alt="Page 34"></div>
+      <div class="page"><img src="images/35.png" alt="Page 35"></div>
+      <div class="page"><img src="images/36.png" alt="Page 36"></div>
+      <div class="page"><img src="images/37.png" alt="Page 37"></div>
+      <div class="page"><img src="images/38.png" alt="Page 38"></div>
+      <div class="page"><img src="images/39.png" alt="Page 39"></div>
+      <div class="page"><img src="images/40.png" alt="Page 40"></div>
+      <div class="page"><img src="images/41.png" alt="Page 41"></div>
+      <div class="page"><img src="images/42.png" alt="Page 42"></div>
+      <div class="page"><img src="images/43.png" alt="Page 43"></div>
+      <div class="page"><img src="images/44.png" alt="Page 44"></div>
+      <div class="page"><img src="images/45.png" alt="Page 45"></div>
+      <div class="page"><img src="images/46.png" alt="Page 46"></div>
+      <div class="page"><img src="images/47.png" alt="Page 47"></div>
+      <div class="page"><img src="images/48.png" alt="Page 48"></div>
+      <div class="page"><img src="images/49.png" alt="Page 49"></div>
+      <div class="page"><img src="images/50.png" alt="Page 50"></div>
+      <div class="page"><img src="images/51.png" alt="Page 51"></div>
+      <div class="page"><img src="images/52.png" alt="Page 52"></div>
+      <div class="page"><img src="images/53.png" alt="Page 53"></div>
+      <div class="page"><img src="images/54.png" alt="Page 54"></div>
+      <div class="page"><img src="images/55.png" alt="Page 55"></div>
+      <div class="page"><img src="images/56.png" alt="Page 56"></div>
+    </div>
+    
+    <button id="next-page" class="nav-button"><i class="fas fa-arrow-right"></i></button>
+  </div>
+
+  <script>
+    // Initialize Turn.js with smooth flip effect
+    $(document).ready(function(){
+      $("#flipbook").turn({
+        width: 1200,           // Adjust width for landscape
+        height: 450,           // Adjust height for landscape
+        autoCenter: true,      // Auto center the flipbook
+        page: 1,               // Start at the first page
+        duration: 2000,        // Set flip duration to 1000ms (1 second) for smooth transitions
+        acceleration: true     // Enable hardware acceleration for smoother animations
+      });
+  
+      // Handle next and previous buttons with smooth flip
+      $('#next-page').click(function() {
+        $('#flipbook').turn('next'); // Go to the next page
+      });
+  
+      $('#prev-page').click(function() {
+        $('#flipbook').turn('previous'); // Go to the previous page
+      });
+    });
+  </script>
+  
+
+</body>
+</html>
